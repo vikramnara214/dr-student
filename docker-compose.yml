@@ -1,0 +1,25 @@
+# Local dev: run all three server services with one command.
+# Each service is built from its own folder and gets its own port.
+# The services do not exist yet — this file is the shape they will fit.
+# Start a service's folder with a Dockerfile + `cargo run` first, then
+# wire it in here. Until then, `docker compose up` will fail loudly
+# on the missing folders, which is honest, not broken.
+#
+# Ports (frozen — the apps and curl examples use these):
+#   session-api:      8081
+#   verification:     8082
+#   attendance-store: 8083
+
+services:
+  session-api:
+    build: ./server/session-api
+    ports:
+      - "8081:8081"
+  verification:
+    build: ./server/verification
+    ports:
+      - "8082:8082"
+  attendance-store:
+    build: ./server/attendance-store
+    ports:
+      - "8083:8083"

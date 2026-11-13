@@ -46,11 +46,17 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full design.
 
 | Folder | What it is | Status |
 |---|---|---|
-| `android/host-app/` | Host app: session QR + rotating BLE beacon | Starter ready — needs testing on a real phone |
-| `android/student-app/` | Student app: scan QR + hear token + submit | Not built yet — good place to contribute |
-| `server/` | Verifies token currency + RSSI, stores attendance | Not built yet — Rust planned |
+| `android/host-app/` | Host app shell: session screen, wires the systems together | Starter ready — needs testing on a real phone |
+| `android/student-app/` | Student app shell: scan + submit screens | Not built yet — good place to contribute |
+| `android/features/qr/` | QR system: generate (host) + scan (student) | Generator exists in host app, moves here |
+| `android/features/ble/` | Bluetooth system: advertise + scan + RSSI | Advertiser exists in host app, moves here |
+| `android/features/permissions/` | Permissions system: all runtime permission flows | Not built yet — extracted from host app |
+| `android/features/frs/` | FRS: face recognition at login, on-device only | Not built yet — see its README for the privacy rules |
+| `server/session-api/` | Creates sessions, owns the session secret | Not built yet — Rust planned |
+| `server/verification/` | Verifies token currency + RSSI | Not built yet — Rust planned |
+| `server/attendance-store/` | Stores records, dedupes, serves the list | Not built yet — Rust planned |
 | `rust/token-core/` | Shared token logic (HMAC, 30s windows) in Rust, used by server / beacon / Android via NDK | Not built yet |
-| `docs/` | Architecture, setup, emulator + laptop-beacon notes | Start here if you are new |
+| `docs/` | Architecture, contracts, teams, setup | New? Start with `docs/TEAMS.md`, then `docs/CONTRACTS.md` |
 
 ## Quick start
 

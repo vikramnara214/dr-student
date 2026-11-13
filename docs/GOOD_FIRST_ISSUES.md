@@ -4,6 +4,10 @@ Create these as GitHub issues (label: `good first issue`) once the repo is
 live. Each one is small, self-contained, and learnable in an evening.
 Assign one person per issue.
 
+Issues are tagged by feature system (see `docs/TEAMS.md`) so a junior can
+pick work in their own system: #1 Docs, #2/#5 BLE + Permissions,
+#3/#4 Host shell, #6/#7/#8 Student shell + QR + BLE, #9/#10 Token/Server.
+
 ## Tiny / docs (first PR ever)
 
 1. **Docs: add screenshots to the host-app README** — run the host app,

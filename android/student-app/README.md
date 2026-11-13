@@ -4,6 +4,9 @@ This is the second app in the project, and the main build for contributors.
 
 ## What it should do
 
+0. **Log in with face recognition first** (FRS system,
+   `android/features/frs/`): enter studentId → face verify → logged in.
+   No attendance submission happens until login passes.
 1. Scan the session QR (CameraX + ZXing / ML Kit) → session ID.
 2. Listen for the BLE beacon (service UUID
    `b5a3f2c1-4d6e-4a8b-9c0d-1e2f3a4b5c6d`) → current token + RSSI.

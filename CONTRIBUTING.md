@@ -5,6 +5,12 @@ juniors can learn how a real app is built, reviewed, and shipped. You do not
 need to be an expert. You do need to follow the flow below, because that flow
 *is* the learning.
 
+Working in a team? Read [`docs/TEAMS.md`](docs/TEAMS.md) first — it says
+which folder your team owns and how teams work in parallel without waiting
+for each other. The written contracts between parts live in
+[`docs/CONTRACTS.md`](docs/CONTRACTS.md); build against those, not against
+another team's unfinished code.
+
 ## The flow (read this once, then it becomes habit)
 
 1. **Pick an issue.** Start with [`good first issue`](https://github.com/vikramnara214/dr-student/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
